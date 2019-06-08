@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Avaliação - Cadastro de Veículos</title>
+</h:head>
+<h:body>
+	<h:panelGrid columns="2">
+		<h:outputLabel value="Placa: " />
+		<p:inputText value="#{VeiculoMB}" />
+
+
+		<h:outputLabel value="Modelo: " />
+		<p:inputText value="#{VeiculoMB}" />
+	</h:panelGrid>
+
+	<h:outputLabel value="Marca: " />
+	  <p:selectOneMenu value="#{VeiculoMB}">
+            <f:selectItem itemLabel="Fiat" itemValue="" />
+            <f:selectItem itemLabel="Chevrolet" itemValue="" />
+            <f:selectItem itemLabel="Volkswagen" itemValue="" />
+            <f:selectItem itemLabel="Renault" itemValue="" />
+        </p:selectOneMenu>
+
+
+	<h:panelGrid columns="2">
+
+		<h:outputLabel value="Cor: " />
+		<p:inputText value="#{VeiculoMB}" />
+
+		<h:outputLabel value="Preço: " />
+		<p:inputText value="#{VeiculoMB}" />
+
+	</h:panelGrid>
+
+	<p:commandButton value="Novo" icon="ui-icon-plus"
+		oncomplete="PF('dgSave').show()">
+	</p:commandButton>
+	<p:commandButton value="Cadastrar" icon="ui-icon-check"  />
+	<p:commandButton value="Atualizar" icon="ui-icon-arrowrefresh-1-e " />
+	<p:commandButton value="Excluir" icon="ui-icon-trash " />
+
+
+
+</h:body>
+</html>
